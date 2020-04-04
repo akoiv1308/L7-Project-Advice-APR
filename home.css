@@ -1,0 +1,157 @@
+body {
+  background: #fff;
+  font-family: "Comfortaa", sans-serif;
+  position: relative;
+}
+
+.navbar {
+    transition: all 0.4s;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+}
+
+
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #555;
+    }
+}
+
+footer {
+	color: #ecf0f1;
+	margin-top: 10vh;
+	background-color: #2d3742;
+}
+
+.footer-stuff {
+	padding-top: 50px;
+	padding-bottom: 25px;
+}
+
+.footer-sm {
+	font-size: 32px;
+	padding-right: 30px;
+	margin-left: -15px;
+	color: #ecf0f1;
+	transition: all .1s ease-in-out;
+}
+
+.footer-sm:hover {
+	color: #2d3742;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-content {
+  text-align: center;
+  text-transform: uppercase;
+  /* scroll-snap-type: y mandatory; */
+  position: relative;
+  height: 100vh;
+  /* overflow-y: scroll; */
+}
+
+.hover,
+.word,
+h1 {
+  cursor: pointer;
+}
+
+h1 {
+  position: relative;
+  color: #fff;
+  font: 900 60px Montserrat;
+  text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.concept {
+  position: relative;
+  padding: 5em;
+  height: 100vh;
+  overflow: hidden;
+  scroll-snap-align: center;
+}
+.concept:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(rgba(0, 0, 0, 0.3), transparent);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.concept:hover:before {
+  opacity: 0.5;
+}
+
+.concept-two {
+  display: grid;
+  grid: 100%/repeat(6, 1fr);
+  padding: 5em 15em;
+  background: url(https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) center center/cover;
+}
+.concept-two .hover {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.concept-two h1 {
+  color: transparent;
+  text-align: 0 1px 1px;
+  -webkit-text-stroke: 2px #fff;
+  text-shadow: none;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.concept-two .hover:hover h1 {
+  transform: scale(1.5);
+  color: #fff;
+  -webkit-text-stroke: 2px transparent;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  font-family: "Comfortaa", sans-serif;
+  margin: 100px;
+}
